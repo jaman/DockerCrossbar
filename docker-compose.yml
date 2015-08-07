@@ -1,7 +1,11 @@
+data:
+    build: .
+    volumes:
+       - /code
 web:
     build: .
     command: crossbar start
-    volumes:
-      - /code
+    volumes_from:
+      - data
     ports:
       - "8080:8080"
