@@ -5,3 +5,4 @@ WORKDIR /code
 ADD requirements.txt /code/
 RUN rm .crossbar/node.pid; pip install -r requirements.txt
 ADD . /code/
+VOLUME /code
